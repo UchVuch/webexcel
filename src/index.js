@@ -6,7 +6,9 @@ import { Formula } from './components/formula/Formula';
 import { Table } from './components/table/Table';
 
 const excel = new Excel('#app', {
+  name: 'Excel',
   components: [Header, Toolbar, Formula, Table]
 })
 excel.render()
+excel.init()
 console.log(excel)
