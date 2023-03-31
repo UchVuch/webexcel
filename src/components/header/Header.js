@@ -1,10 +1,17 @@
-import { ExelComponent } from '@core/ExelComponent';
+import { ExcelComponent } from '@core/ExcelComponent';
 
-export class Header extends ExelComponent {
+export class Header extends ExcelComponent {
   static className = 'excel__header'
 
-  constructor() {
-    super()
+  constructor($root) {
+    super($root, {
+      name: 'Header',
+      listeners: ['click']
+    })
+  }
+
+  onClick() {
+    console.log('click on Header!', this.$root)
   }
 
   toHTML() {

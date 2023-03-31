@@ -1,10 +1,17 @@
-import { ExelComponent } from '@core/ExelComponent';
+import { ExcelComponent } from '@core/ExcelComponent';
 
-export class Formula extends ExelComponent {
+export class Formula extends ExcelComponent {
   static className = 'excel__formula'
 
-  constructor() {
-    super()
+  constructor($root) {
+    super($root, {
+      name: 'Formula',
+      listeners: ['input']
+    })
+  }
+
+  onInput() {
+    console.log('input listeners')
   }
 
   toHTML() {
